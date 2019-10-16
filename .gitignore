@@ -1,0 +1,9 @@
+*.swp
+
+/conf/**
+/*.ovpn
+
+.idea/**
+/*.iml
+
+!.gitkeep
