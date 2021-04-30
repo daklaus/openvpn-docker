@@ -1,0 +1,9 @@
+# Ignore everything...
+*
+# ...but only files, not subdirectories...
+!*/
+
+# ...and also do not ignore these files...
+!.gitkeep
+!.gitignore
+

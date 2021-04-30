@@ -6,6 +6,8 @@ set -eo pipefail
 # - https://github.com/kylemanna/docker-openvpn/blob/master/docs/docker-compose.md
 # - https://github.com/kylemanna/docker-openvpn/blob/master/docs/otp.md
 
+CLIENT_DIR=clients
+
 usage(){
 	if [ $# -gt 0 ]; then
 		echo -e "$*\n"
@@ -48,7 +50,7 @@ docker-compose run --rm openvpn \
 echo -e "\n\n### Generating client profile file ..."
 
 docker-compose run --rm openvpn \
-	ovpn_getclient "$CLIENTNAME" > "$CLIENTNAME".ovpn
+	ovpn_getclient "$CLIENTNAME" > "$CLIENT_DIR/$CLIENTNAME".ovpn
 
 if [ $twofa -ne 1 ]; then
 	echo -e "\n\n### Finished successfully"
