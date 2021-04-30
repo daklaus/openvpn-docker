@@ -7,7 +7,7 @@ This is a docker-compose project using [kylemanna's docker-openvpn image](https:
 1. Change the hostname and port in [`commons.sh`](commons.sh) to the DNS name/IP address and port at which your VPN server will be reachable from your clients.
 2. Run the [`init.sh`](init.sh) script to configure the server.
 3. Run [`init-client.sh -2 <client-name>`](init-client.sh) to configure each client user (the `-2` is for 2FA).
-4. You will get a *.ovpn profile file for each client in the base directory of this project. Use this and the Google Authenticator QR code link/secret you got during the execution of the client config script to configure the client's program (e.g. OpenVPN Connect) and Google Authenticator app.
+4. You will get a *.ovpn profile file for each client in the [`clients`](clients) directory of this project. Use this and the Google Authenticator QR code link/secret you got during the execution of the client config script to configure the client's program (e.g. OpenVPN Connect) and Google Authenticator app.
 
 ## Docu
 
